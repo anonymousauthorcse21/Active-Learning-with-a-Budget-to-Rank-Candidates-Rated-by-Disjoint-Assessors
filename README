@@ -1,0 +1,33 @@
+PLEASE READ DETAILS OF THE FILES INCLUDED IN FOLDER: 
+
+1.  util.py            -  Library requirements.
+2.  dataGeneration.py  -  Code for generation of the synthetic datasets 1 and 2.
+3.  Algorithms.py      -  Code for baseline algorithms and proposed algorithms (OPLP_Query and BFLP-Query)
+4.  main.py            -  Driver file.
+5.  plots.py           -  Code for plot generation. (nDCG@25 vs Algorithms , PredictRank vs. TrueRank)
+6.  Datasets           -  contains three data files. Two synthetic datasets and one real-world MIT data.
+
+
+
+How to RUN the CODE - 
+
+1. Install the requirements mentioned in util.py
+2. Connect to CUDA(GPU)
+3. Run the main.py file.
+4. As prompted enter dataset to be used to test algorithms. (sd1 or sd2 or MIT)
+            - enter "sd1" for synthetic dataset 1
+            - enter "sd2" for synthetic dataset 2
+            - enter "MIT" for MIT DATA
+5. Code will run on all the baselines and proposed algorithms.
+            (Call for algorithms starts from lineNo:35 (main.py) and ends at lineNo:73 (main.py).
+            - To test individual baselines/Algorithms Comment other algorithms calls. 
+              start of the algorithm call indicated by comment on right side in main.py(lineno: 35 to 73)
+
+6. To plot the results - 
+            - Run all the baseline and proposed algorithms.(Uncomment lineNo 35 to 73 (main.py))
+            Plot 1 -  Uncomment LineNo-77 (main.py): Will give plot for nDCG@25 vs Algorithms
+            Plot 2 -  Uncomment LineNo - 78,79,80 (main.py) Replace the ALGORITHM_NAME
+                      with one mentioned in comment on line 79 (main.py) in prPath
+                      (This will generate plot for Predictrank vs Truerank)
+                      
+            
